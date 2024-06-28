@@ -17,17 +17,17 @@
 CRPNAM='Cotton,(Van Heemst, 1988)'
 
 ** emergence
-TBASEM   =  10.0    ! lower threshold temp. for emergence [cel]
-TEFFMX   =  30.0    ! max. eff. temp. for emergence [cel]
-TSUMEM   = 140.     ! temperature sum from sowing to emergence [cel d]
+TBASEM   =  12.0    ! lower threshold temp. for emergence [cel]
+TEFFMX   =  35.0    ! max. eff. temp. for emergence [cel]
+TSUMEM   = 130.     ! temperature sum from sowing to emergence [cel d]
 
 ** phenology
 IDSL     =   0      ! indicates whether pre-anthesis development depends
                     ! on temp. (=0), daylength (=1) , or both (=2)
 DLO      = 1.0      ! optimum daylength for development [hr]
 DLC      = 0.0      ! critical daylength (lower threshold) [hr]
-TSUM1    = 760.     ! temperature sum from emergence to anthesis [cel d]
-TSUM2    =1481.     ! temperature sum from anthesis to maturity [cel d]
+TSUM1    = 700.     ! temperature sum from emergence to anthesis [cel d]
+TSUM2    =1400.     ! temperature sum from anthesis to maturity [cel d]
 DTSMTB   =   0.00,    0.00,     ! daily increase in temp. sum 
             10.00,    0.00,     ! as function of av. temp. [cel; cel d]
             30.00,   20.00,
@@ -37,7 +37,7 @@ DVSEND   =   2.00   ! development stage at harvest (= 2.0 at maturity [-])
 
 ** initial
 TDWI     =   7.00    ! initial total crop dry weight [kg ha-1]
-** ! Not used as imput by WOF6_0 model
+** ! Not used as input by WOF6_0 model
 LAIEM    =   0.0045024 ! leaf area index at emergence [ha ha-1]
 RGRLAI   =   0.0500  ! maximum relative increase in LAI [ha ha-1 d-1]
 
@@ -48,7 +48,7 @@ SLATB    =   0.00,    0.0016,   ! specific leaf area
 SPA      =   0.000     ! specific pod area [ha kg-1]
 SSATB    =   0.0, 0.,  ! specific stem area [ha kg-1]
              2.0, 0.   ! as function of DVS
-SPAN     =  58.        ! life span of leaves growing at 35 Celsius [d]
+SPAN     =  60.        ! life span of leaves growing at 35 Celsius [d]
 TBASE    =  10.0    ! lower threshold temp. for ageing of leaves [cel]
 
 ** assimilation
@@ -62,7 +62,7 @@ AMAXTB   =   0.00,   40.00,     ! max. leaf CO2 assim. rate
 TMPFTB   =   0.00,    0.00,     ! reduction factor of AMAX
             14.00,    0.00,     ! as function of av. temp. [cel; -]
             26.00,    1.00,
-            38.00,    1.00,
+            38.00,    0.80,     ! Adjusted to reflect local temperature effects
             46.00,    0.00
 TMNFTB   =   0.00,    0.00,     ! red. factor of gross assim. rate
              3.00,    1.00      ! as function of low min. temp. [cel; -]
@@ -113,8 +113,7 @@ RDRRTB   =   0.00,    0.000,    ! rel. death rate of roots
              2.00,    0.020
 RDRSTB   =   0.00,    0.000,    ! rel. death rate of stems
              1.50,    0.000,    ! as a function of DVS [-; kg kg-1 d-1]
-             1.5001,  0.020,
-             2.00,    0.020
+
 
 ** water use
 CFET     =   1.00   ! correction factor transpiration rate [-]
