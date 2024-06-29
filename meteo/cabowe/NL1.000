@@ -21,11 +21,11 @@
 *  vapour pressure (kPa)
 *  mean wind speed (m s-1)
 *  precipitation (mm d-1)
-** WCCDESCRIPTION=Netherlands, Wageningen
-** WCCFORMAT=2
-** WCCYEARNR=2000
-*---------------------------------------------------------*
-   77.13  16.75     494.  -0.18 -0.55
+** WCCDESCRIPTION=India, New Delhi
+** WCCFORMAT=1
+** WCCYEARS=1000
+ NEW DELHI     
+ 1000  77.5  28. 0.25 0.45
 1	2020	1	5.02	20.2	29.4	2.36	1.11	67.30	0.0
 1	2020	2	4.78	22.0	30.6	2.63	1.37	63.25	0.0
 1	2020	3	5.08	18.5	29.1	2.12	0.98	67.85	0.0
